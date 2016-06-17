@@ -1,9 +1,92 @@
-<DOCTYPE!>
-	<html>
-		<head>
-			
-		</head>
-		<body>
-			<p> Hello World </p>
+<html>
+	<head>
+		<title>Calculator</title>
+		<link rel="stylesheet" type="text/css" href="Calculator.css">
+	</head>
+	<body>
+		<form name="frm">
+		<input type="text" name="result">
+		</br>
+		<input id="one" type="button" name="1" value="1" onClick="run1()"></input>
+		<input type="button" name="2" value="2" onClick="run2()"></input>
+		<input type="button" name="3" value="3" onClick="run3()"></input>
+		<input class="signs" type="button" name="plus" value="+" onClick="runPlus()"></input>
+		</br>
+		<input type="button" name="4" value="4" onClick="run4()"></input>
+		<input type="button" name="5" value="5" onClick="run5()"></input>
+		<input type="button" name="6" value="6" onClick="run6()"></input>
+		<input class="signs" type="button" name="mult" value="x" onClick="runMult()"></input>
+		</br>
+		<input type="button" name="7" value="7" onClick="run7()"></input>
+		<input type="button" name="8" value="8" onClick="run8()"></input>
+		<input type="button" name="9" value="9" onClick="run9()"></input>
+		<input class="signs" type="button" name="divide" value="/" onClick="runDivide()"></input>
+		<p id="words">The "/" symbol means the same thing as a division symbol</p>
+		<p id="scndWrds">Also, if after you press the equals button and nothing happens, please check your math input.</p>
+		</br>
+		<input id="zero" type="button" name="0" value="0" onClick="run0()"></input>
+		<input id="decimal" type="button" name="dec" value="." onClick="runDec()"></input>
+		<input class="signs" type="button" name="min" value="-" onClick="runMin()"></input>
+		</br>
+		<input id="calc" type="button" name="calc" value="=" onClick="evalu()"></input>
+		<input id="clear" type="button" name="clear" value="clear" onClick="runClear()"></input>
+		<script>
+		function run1 (){
+		document.frm.result.value += "1";
+		}
+		function run2 () {
+		document.frm.result.value += "2";
+		}
+		function run3 () {
+		document.frm.result.value += "3";
+		}
+		function run4 () {
+		document.frm.result.value += "4";
+		}
+		function run5 () {
+		document.frm.result.value += "5";
+		}
+		function run6 () {
+		document.frm.result.value += "6";
+		}
+		function run7 () {
+		document.frm.result.value += "7";
+		}
+		function run8 () {
+		document.frm.result.value += "8";
+		}
+		function run9 () {
+		document.frm.result.value += "9";
+		}
+		function run0 () {
+		document.frm.result.value += "0";
+		}
+		function runDec () {
+		document.frm.result.value += ".";
+		}
+		function runPlus () {
+		document.frm.result.value += "+";
+		}
+		function runMin () {
+		document.frm.result.value += "-";
+		}
+		function runMult () {
+		document.frm.result.value += "*";
+		}
+		function runDivide () {
+		document.frm.result.value += "/";
+		}
+		function runClear () {
+		document.frm.result.value = "";
+		}
+		function evalu() {
+			var def = document.frm.result.value.defaultValue;
+			var evalo = eval(document.frm.result.value);
+			document.frm.result.value = evalo;
+			if(evalo==undefined){
+				document.frm.result.value = "Cannot compute!"
+				};
+		}
+		</script>
 		</body>
-	</html>
+</html>

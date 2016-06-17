@@ -1,0 +1,26 @@
+#clear{
+	width:52px;
+}
+#calc{
+	width:50px;
+}
+#zero{
+	width:50px;
+}
+.signs{
+	width:25px;
+}
+#decimal{
+	width:23px;
+}
+#words{
+	margin-left: 150px;
+	margin-top: -25px;
+	position: absolute;
+}
+#scndWrds{
+	margin-left: 150px;
+	position: absolute;
+	margin-top: -10px;
+}
+
